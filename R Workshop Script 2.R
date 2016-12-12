@@ -19,4 +19,6 @@ library(BenthicAnalysis)
 
 runUI()
 
-#############################################################################################
+#Extract summary statistics
+ben<-benth.met(RCAtaxadata,tax.fields = 2, site.fields = 2)
+ben.mets<-ben$Summary.Metrics
