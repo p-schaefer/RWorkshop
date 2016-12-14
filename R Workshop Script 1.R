@@ -1,6 +1,6 @@
 ###########################################################################################
 #Script for the R workshop held in conjunction with the OBBN Annual Biomonitoring Meeting
-#January x 2017
+#January 18 2017
 #
 #Part 1: Intorudtion to R
 #Prepared by: Patrick Schaefer and Chris Jones
@@ -12,12 +12,13 @@
 ###########################################################################################
 
 #Download packages
-install.packages(c("vegan","lme4","MuMIn"))
+install.packages(c("vegan","lme4","MuMIn","devtools"))
 
 #Load packages into memory
 library(vegan)
 library(lme4)
 library(MuMIn)
+library(devtools)
 
 #Loading data from a .csv file
 data1<-read.csv(choose.files())
@@ -49,8 +50,8 @@ data1$Richness
 data1[1:4,]
 
 #Using logical statements
-data1$Site =="Site A" # "==" a logical statement - returns T/F vector
-data1$Site !="Site A" # "!=" a logical statement - returns T/F vector
+data1$Site == "Site A" # "==" a logical statement - returns T/F vector
+data1$Site != "Site A" # "!=" a logical statement - returns T/F vector
 
 data1$MonYr %in% c(2,3) # "%in%" a logical statement - returns T/F vector
 
