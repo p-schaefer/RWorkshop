@@ -59,6 +59,8 @@ data1<-read.csv(choose.files())
 data1<-read.csv("file path")
 data1<-read.delim("clipboard")
 
+#Shortcut: data1<-data("data1)
+
 #View the data
 View(data1)
 
