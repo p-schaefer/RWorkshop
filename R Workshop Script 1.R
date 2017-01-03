@@ -10,7 +10,7 @@
 #Prologue 
 #
 #R is an interprative programming language consisting of objects and functions. Objects are created
-#by the user or by function:
+#by the user or by functions:
 a<-NA
 a<-"Patrick"
 #Here I created a blank object "a", then assigned it to represent the characters "Patrick".
@@ -59,7 +59,7 @@ data1<-read.csv(choose.files())
 data1<-read.csv("file path")
 data1<-read.delim("clipboard")
 
-#Shortcut: data1<-data("data1)
+#Shortcut: data1<-data("data1")
 
 #View the data
 View(data1)
