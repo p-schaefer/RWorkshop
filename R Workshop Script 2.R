@@ -61,8 +61,12 @@ trenddata$Site<-as.factor(trenddata$Site)
 # - Binomial - presence/absence or percentages
 # - Poisson - counts, richness (mean<8)
 # - Gausian (or normal) - HBI, ratios (sometimes), richness (mean >10)
-#Will only examine HBI (Gaussian) and Intolerants.Richness (Poisson)
 ##########################################
+
+#Will only examine HBI (Gaussian) and Intolerants Richness (Poisson)
+hist(trenddata$HBI)
+hist(trenddata$Intolerants.Richness)
+
 
 ##########################################
 #Step 2 - Determine fixed and random predictor variables
@@ -125,16 +129,31 @@ xyplot(fitted(site.model2)~trenddata$MonYr|trenddata$Site)
 
 ci1<-ci_fun2(model=site.model1,
              model.variable="MonYr",
+             data.variable="Site",
+             plot=T,
+             stat="median",
+             level=0.95,
              data=trenddata,
              plot=T)
 
 ci2<-ci_fun2(model=site.model2,
              model.variable="MonYr",
+             data.variable="Site",
+             plot=T,
+             stat="median",
+             level=0.95,
              data=trenddata,
              plot=T)
 
-xyplot_fun2(model=site.model1,model.variable="MonYr",data=trenddata)
-xyplot_fun2(model=site.model2,model.variable="MonYr",data=trenddata)
+xyplot_fun2(model=site.model1,
+            model.variable="MonYr",
+            data.variable="Site",
+            data=trenddata)
+
+xyplot_fun2(model=site.model2,
+            model.variable="MonYr",
+            data.variable="Site",
+            data=trenddata)
 
 ###########################################################################################
 #2) Is there evidence for declines on a watershed/subwatershed scale?
@@ -172,12 +191,12 @@ trenddata$Site<-as.factor(trenddata$Site)
 ##########################################
 
 #Watershed/subwatershed model
-watershed.model1<-lmer(HBI~0+MonYr+Zone+MonYr/Zone+(MonYr|Site)+(1|MonYr),
+watershed.model1<-lmer(HBI~0+MonYr*Zone+(MonYr|Site)+(1|MonYr),
                        data=trenddata,
                        na.action=na.fail,
                        REML=F)
 
-watershed.model2<-glmer(Intolerants.Richness~0+MonYr+Zone+MonYr/Zone+(MonYr|Site)+(1|MonYr),
+watershed.model2<-glmer(Intolerants.Richness~0+MonYr*Zone+(MonYr|Site)+(1|MonYr),
                        data=trenddata,
                        na.action=na.fail,
                        family=poisson)
