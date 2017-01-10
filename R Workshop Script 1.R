@@ -27,6 +27,10 @@ b
 #A function is an object that is assigned parameters and will do something with them. Functions accept parameters
 #in parenthesis i.e. do.something(). The paste() function will print the assigned values of all objects you give it:
 paste(a, b)
+#
+#To learn more about any function in R, simply type the function behind a question mark, without parentheses
+?paste
+#
 #Function outputs can be saved to objects as well and run later to retrieve the values:
 c<-paste(a, b)
 c
@@ -76,7 +80,7 @@ summary(data1$Site)
 as.character(data1$Site)
 
 ###########################################################################################
-#Section 2 - Selecting viewing and manipulating data, logical statements
+#Section 2 - Selecting, viewing and manipulating data, logical statements
 #
 ###########################################################################################
 
@@ -127,6 +131,7 @@ median(data1$Richness)
 
 #Simple xy plot
 plot(x=data1$Richness, y=data1$HBI)
+plot(Richness~HBI, data=data1)
 
 plot(x=data1$Richness, y=data1$HBI, 
      main="Richness vs. HBI",
