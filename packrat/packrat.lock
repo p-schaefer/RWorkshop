@@ -189,11 +189,6 @@ Hash: b4b1006c635b016d1e33a98789e228ba
 Requires: ModelMetrics, car, foreach, ggplot2, lattice, nlme, plyr,
     reshape2
 
-Package: chron
-Source: CRAN
-Version: 2.3-48
-Hash: 40e782a5e80c12eb63c4b0d901dae184
-
 Package: class
 Source: CRAN
 Version: 7.3-14
