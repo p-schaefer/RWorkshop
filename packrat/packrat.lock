@@ -414,8 +414,8 @@ Hash: bdc4d48c3135e8f3b399536ddf160df4
 
 Package: maptools
 Source: CRAN
-Version: 0.8-40
-Hash: 842029044a25722afd915450ee4606c2
+Version: 0.8-41
+Hash: 08f01c0dd8860f3d176d7c902804a102
 Requires: foreign, lattice, sp
 
 Package: mclust
@@ -639,8 +639,8 @@ Hash: f217094f45b3cd5dc8f8a7ef98e7fbe0
 
 Package: shiny
 Source: CRAN
-Version: 0.14.2
-Hash: b3151540f7d02b2b455bbc1c4d75f5e2
+Version: 1.0.0
+Hash: 315fd5ac8ada4047f81af7c19d5a5974
 Requires: R6, digest, htmltools, httpuv, jsonlite, mime, sourcetools,
     xtable
 
@@ -657,8 +657,8 @@ Requires: lattice
 
 Package: spdep
 Source: CRAN
-Version: 0.6-8
-Hash: 8d080d8dd906b6f0bde411a08e5a8ef4
+Version: 0.6-9
+Hash: 466bd2efc5f03d3dc764c3900d7b23fa
 Requires: LearnBayes, MASS, Matrix, boot, coda, deldir, gmodels, nlme,
     sp
 
